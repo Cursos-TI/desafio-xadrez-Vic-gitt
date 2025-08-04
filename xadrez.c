@@ -7,10 +7,46 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    int opcao = 0; // Menu de seleção
+    printf("=======================\n");
+    printf("   Escolha uma opção   \n");
+    printf("=======================\n");
+    printf("1. Torre\n2. Bispo\n3. Rainha\n");
+    printf("=======================\n");
+    scanf("%d", &opcao);
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+     switch (opcao) 
+    {
+        case 1:  // movimento torre
+            printf("-> ");
+            for(int i = 1; i<=5; i++){
+                if(i == 5)
+                    printf("(x%d)", i);
+            }
+        break;
 
+        case 2: // movimento bispo
+            printf("↗ ");
+            for(int i = 1; i<=5; i++){
+                if(i == 5)
+                    printf("(x%d)", i);
+            }
+        break;
+
+        case 3: // movimento rainha
+            printf("<- ");
+            for(int i = 1; i<=8; i++){
+                if(i == 8)
+                    printf("(x%d)", i);
+            }
+        break;
+    
+    default:
+        printf("Opção inválida!\n");
+        break;
+    }
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
 
